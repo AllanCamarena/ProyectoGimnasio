@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptRutinas" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6498ebd-91f7-40e9-87f2-3790acf47471">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from rutina]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numRutina" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreRutina" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="repeticiones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="298" y="0" width="263" height="62" uuid="2d28afc2-1fd1-4f06-9df7-ac31e0b3e207"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Rutinas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="284" y="62" width="288" height="22" uuid="eac5eb87-0eaa-46f8-a33c-20d263185741"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Aqui podras visualizar todas las rutinas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="94" width="383" height="42" uuid="7d67cafa-daec-4784-ba4b-ed708a4d544f"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Las rutinas estan catalogadas por el ID, si tu ID es el numero 5, tu rutina sera la numero 5, si deseas cambiar algo contacta a alguno de nuestros entrenadores]]></text>
+			</staticText>
+			<image>
+				<reportElement x="11" y="0" width="128" height="128" uuid="6287d708-c713-42f6-a166-950bb58e2235"/>
+				<imageExpression><![CDATA["D:\\UDL\\7. Septimo Cuatrimestre\\Ingenieria de Software\\Segundo Parcial\\JavaNetBeans\\ProyectoGimnasio\\src\\imagenes\\logo - copia - copia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="672" y="0" width="128" height="128" uuid="951b3b60-068b-4197-8905-3bc6f5e9ecb1"/>
+				<imageExpression><![CDATA["D:\\UDL\\7. Septimo Cuatrimestre\\Ingenieria de Software\\Segundo Parcial\\JavaNetBeans\\ProyectoGimnasio\\src\\imagenes\\logo - copia - copia.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="dea9dd35-a214-44dd-90c6-d0a74880eab7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="160" height="15" forecolor="#000000" backcolor="#66FF66" uuid="ccbebbae-33c0-4836-9694-3b1f9f758bbd"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="0" width="160" height="15" forecolor="#000000" backcolor="#66FF66" uuid="613ff8fc-85ae-4acc-9989-44e1edef0beb"/>
+				<text><![CDATA[numRutina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="0" width="160" height="15" forecolor="#000000" backcolor="#66FF66" uuid="6bfcd2ba-56af-413c-8f61-3cfb51952985"/>
+				<text><![CDATA[nombreRutina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="0" width="160" height="15" forecolor="#000000" backcolor="#66FF66" uuid="629a92c3-b4ec-48a1-8380-74da8315ed35"/>
+				<text><![CDATA[tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="640" y="0" width="160" height="15" forecolor="#000000" backcolor="#66FF66" uuid="e0106117-a072-42aa-b5ad-b7f22b0e0f1a"/>
+				<text><![CDATA[repeticiones]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="851d0b96-e784-4222-a4e1-063698d1d569"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="160" height="15" backcolor="#66FF33" uuid="c6841fbf-8b26-4bf6-8239-1947437217fe"/>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="160" y="0" width="160" height="15" backcolor="#66FF33" uuid="0f1b9cb3-1843-4c79-9d99-4f41fd191a1c"/>
+					<textFieldExpression><![CDATA[$F{numRutina}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="320" y="0" width="160" height="15" backcolor="#66FF33" uuid="ff19e27c-de96-4b46-80d3-c395c1a0305c"/>
+					<textFieldExpression><![CDATA[$F{nombreRutina}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="480" y="0" width="160" height="15" backcolor="#66FF33" uuid="93476b44-5109-4520-a59f-62d72b50ad3f"/>
+					<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="640" y="0" width="160" height="15" backcolor="#66FF33" uuid="61bc6b43-7936-4ab0-a0d0-2baf85380040"/>
+					<textFieldExpression><![CDATA[$F{repeticiones}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="36cb5e5d-77c1-4b91-b3a8-f5baf7c3cb8c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="843" height="24" forecolor="#000000" backcolor="#66FF66" uuid="06dec1fd-4134-44c4-85d8-b947efc7b97f"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="232" y="4" width="393" height="20" forecolor="#736343" uuid="1378cf9b-92e2-4845-ab51-7a37ea57fc9b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="4c739653-2bcc-4fe2-86c2-6c6d95c42378"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="89b5dfc6-c7c9-446d-aa52-ac3e2f96012a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
